@@ -83,7 +83,7 @@ export default function FirstComponent(props) {
 
         <button className='Btn' onMouseOver={()=>setRandom()} 
         
-        // style={isFalse?my2Style:myStyle}    
+        style={isFalse?my2Style:myStyle}    
         onClick={()=>{setAnswer(1)}}
         
         

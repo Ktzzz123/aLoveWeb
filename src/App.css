@@ -17,13 +17,33 @@
   position: absolute;
 }
 
-
+.Btn{
+  height: 50px;
+  font-size: 1.2rem;
+  color: black;
+  background-color: beige;
+}
+.Btn:hover{
+  background-color: black;
+  color: white;
+}
 
 .loveText{
   font-size: 10rem;
   font-weight: bold;
 }
 
+.BtnYes{
+  font-size: 1.5rem;
+  color: black;
+  background-color: wheat;
+  text-decoration: none;
+  border: solid black 1px
+}
+.BtnYes:hover{
+  background-color: black;
+  color: wheat;
+}
 
 
 

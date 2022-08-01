@@ -1,7 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import ReactSound from 'react-sound';
 import '../App.css';
 import GIF from '../assests/giphy.gif'
+
 
 
 export default function FirstComponent(props) {
@@ -12,6 +14,7 @@ export default function FirstComponent(props) {
     const [num,setNum] = useState()
     const [num2,setNum2] = useState()
     const [isFalse,setIsFalse] = useState(false);
+    const [isBtn, setIsBtn] = useState(false)
 
     //useEffect
     useEffect(()=>{
@@ -22,8 +25,8 @@ export default function FirstComponent(props) {
      
       if(answer ===1){
   
-        setContext('NOOOOOOOO');
-        setIsFalse(true)
+        setContext('Đương nhiên là không rồi nha!');
+        setInterval(()=>{setIsBtn(true)},5000);
         
       }
       if(answer === 2)
@@ -36,7 +39,8 @@ export default function FirstComponent(props) {
             alert('Đâu phải muốn là bấm được tui?')
             break;
         case 40:
-            alert('Thôi thấy tội quá, tha đó')
+            alert('Thôi thấy tội quá, tha đó');
+            setIsFalse(true)
             break;
         default:
             break;
@@ -53,7 +57,7 @@ export default function FirstComponent(props) {
         props.setClick(props.click+1)
 
     }
-
+    
     const myStyle ={
         marginTop:num,
         marginLeft:num2,
@@ -68,7 +72,7 @@ export default function FirstComponent(props) {
         <img src={GIF} className = 'Gif' onClick={()=>props.setClick(props.click+1)}/>
         <div>
         {toggle?
-            <button onClick={(()=>setAnswer(2))}>Khồng</button>:''
+            <button className='Btn' onClick={(()=>setAnswer(2))}>Khồng</button>:''
         }
         <>
         
@@ -77,9 +81,9 @@ export default function FirstComponent(props) {
         {toggle?
         <>
 
-        <button className='YesBtn' onMouseOver={()=>setRandom()} 
+        <button className='Btn' onMouseOver={()=>setRandom()} 
         
-        style={isFalse?myStyle:my2Style} 
+        // style={isFalse?my2Style:myStyle}    
         onClick={()=>{setAnswer(1)}}
         
         
@@ -88,15 +92,15 @@ export default function FirstComponent(props) {
         
         <br/>
        
-        <h1>Text h1</h1>
+        
         </>
         
         :''}
         
         </div>
-        {isFalse?
-        <a href='/loveVan'>Có!!</a>:''}
-  
+        {isBtn?
+        <a className='BtnYes' href='/loveVan' >Có!!</a>:''}
+       
       </div>
   
     

@@ -12,16 +12,35 @@
   height: auto;
   border-radius: 20%;
 }
-
+.container{
+  width: 500px;
+  height: 500px;
+  /* background-color: #282c34; */
+  margin: auto;
+}
 .YesBtn{
   position: absolute;
-}
-
-.Btn{
   height: 50px;
   font-size: 1.2rem;
   color: black;
   background-color: beige;
+}
+
+.Btn:hover{
+  background-color: black;
+  color: white;
+}
+.Btn{
+  position: relative;
+  /* margin: 0; */
+  height: 50px;
+  font-size: 1.2rem;
+  color: black;
+  background-color: beige;
+}
+.Btn:hover{
+  background-color: black;
+  color: white;
 }
 .Btn:hover{
   background-color: black;

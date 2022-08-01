@@ -30,7 +30,7 @@ export default function FirstComponent(props) {
         
       }
       if(answer === 2)
-      setContext('🥺🥺🥺🥺🥺🥺🥺🥺')
+      setText('🥺🥺🥺🥺🥺🥺🥺🥺 thật á?')
       switch(props.click){
         case 20:
             alert('Bấm cc gì?')
@@ -70,30 +70,24 @@ export default function FirstComponent(props) {
         
         <h1>{text}</h1>
         <img src={GIF} className = 'Gif' onClick={()=>props.setClick(props.click+1)}/>
-        <div>
-        {toggle?
-            <button className='Btn' onClick={(()=>setAnswer(2))}>Khồng</button>:''
-        }
-        <>
-        
-        </>
+        <div className='container'>
+   
 
         {toggle?
-        <>
+            <>
+            <button className='Btn' onClick={(()=>setAnswer(2))}>Khồng</button>
+            <button className='BtnYes' onMouseOver={()=>setRandom()} 
+            
+            style={isFalse?my2Style:myStyle}    
+            onClick={()=>{setAnswer(1)}}
+            
+            
+            >{context}</button>
 
-        <button className='Btn' onMouseOver={()=>setRandom()} 
-        
-        style={isFalse?my2Style:myStyle}    
-        onClick={()=>{setAnswer(1)}}
-        
-        
-        >{context}</button>
-
-        
-        <br/>
-       
-        
-        </>
+            
+            <br/>
+            
+            </>
         
         :''}
         
